@@ -1,24 +1,46 @@
-# On The Go - Rwanda Bus Booking PWA
+# Task: Split EcoFleetHome.vue into Router-based Pages
 
-## App Flow:
-1. **Landing** → Click "BOARD BUS NOW"
-2. **Express Selection** → Choose from 14 express companies (RITCO, Volcano, Trinity, etc.)
-3. **Bus Trips** → View trips from 4:00 AM to 8:00 PM with:
-   - Bus plate number
-   - Driver contact phone
-   - Features: WiFi, Luggage, A/C, Reclining seats
-   - Available seats & price
-4. **Destination** → Select destination (Nyanza, Huye, Musanze, etc.)
-5. **Summary** → View trip summary with total price
-6. **Payment** → Choose payment method (Mobile Money, Card, Wallet)
-7. **Ticket** → Show QR code and stop code
+## Status: COMPLETED ✅
 
-## Features:
-- 14 Express companies
-- 17 daily trips (4AM - 8PM)
-- 20 destinations across Rwanda
-- Driver contact for each bus
-- Real-time seat availability
-- Green & white consistent theme
+## What was done:
 
-Run: `npm run dev`
+### Pages Created:
+- [x] 1. LandingPage.vue (`/`) - Hero section with "Board Bus Now" button
+- [x] 2. ExpressPage.vue (`/express`) - Express company selection
+- [x] 3. TripsPage.vue (`/trips`) - Bus trip listing with date picker and filters
+- [x] 4. DestinationPage.vue (`/destination`) - Origin and destination selection
+- [x] 5. SummaryPage.vue (`/summary`) - Trip summary and price
+- [x] 6. PaymentPage.vue (`/payment`) - Payment options and ticket view
+- [x] 7. RoutineTripsPage.vue (`/routine`) - Saved routine trips
+- [x] 8. PlannerPage.vue (`/planner`) - Future trip planner
+
+### Shared Components:
+- [x] LanguageToggle.vue - Language switcher (EN/RW)
+- [x] BottomNav.vue - Responsive navigation (mobile bottom nav, desktop sidebar)
+- [x] StepProgress.vue - Booking progress indicator
+
+### Files Updated:
+- [x] main.js - All route definitions added
+- [x] App.vue - RouterView with BottomNav (single instance)
+- [x] store/index.js - Shared state management for passing data between pages
+- [x] translations/index.js - Added missing translations
+
+### Key Features:
+- Responsive design (mobile bottom nav, desktop sidebar)
+- Language toggle (English/Kinyarwanda)
+- Search and filter functionality on express/trips pages
+- Stop code lookup feature
+- Payment processing simulation
+- Ticket generation with QR code display
+- Routine trips management
+- Trip planner functionality
+
+### Routes:
+- `/` - Landing page
+- `/express` - Express company selection
+- `/trips` - Available trips
+- `/destination` - Origin & destination selection
+- `/summary` - Trip summary
+- `/payment` - Payment and ticket
+- `/routine` - My routine trips
+- `/planner` - Trip planner
