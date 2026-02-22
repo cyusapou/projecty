@@ -1,0 +1,38 @@
+/* On The Go - Clean Green & White Theme */
+
+:root {
+  /* Primary Green */
+  --primary-green: #2E7D32;
+  --primary-green-light: #4CAF50;
+  --primary-green-dark: #1B5E20;
+  --primary-green-bg: #E8F5E9;
+  
+  /* Accent Blue */
+  --accent-blue: #1976D2;
+  
+  /* Neutrals */
+  --white: #FFFFFF;
+  --off-white: #F5F5F5;
+  --light-gray: #E8E8E8;
+  --dark-text: #212121;
+  --medium-text: #424242;
+  --light-text: #757575;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--off-white);
+  color: var(--dark-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  min-height: 100vh;
+}
