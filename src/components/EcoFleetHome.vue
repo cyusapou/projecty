@@ -318,25 +318,6 @@
       </div>
     </div>
 
-    <!-- Bottom Nav -->
-    <nav class="bottom-nav">
-      <div :class="['nav-item', { active: currentScreen === 'landing' }]" @click="goToLanding">
-        <i class="fas fa-home"></i>
-        <span>{{ t.home }}</span>
-      </div>
-      <div class="nav-item">
-        <i class="fas fa-bus"></i>
-        <span>{{ t.express }}</span>
-      </div>
-      <div class="nav-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>{{ t.track }}</span>
-      </div>
-      <div class="nav-item">
-        <i class="fas fa-user"></i>
-        <span>{{ t.account }}</span>
-      </div>
-    </nav>
   </div>
 </template>
 

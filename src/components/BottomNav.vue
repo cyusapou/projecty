@@ -135,17 +135,6 @@ const toggleSidebar = () => {
 }
 
 /* Desktop Sidebar (>= 500px) */
-@media (min-width: 500px) {
-  .mobile-nav {
-    display: none;
-  }
-  
-  .desktop-nav {
-    display: flex;
-  }
-}
-
-/* Desktop Sidebar */
 .sidebar {
   position: fixed;
   left: 0;
@@ -154,10 +143,24 @@ const toggleSidebar = () => {
   width: 220px;
   background: #FFF;
   border-right: 1px solid #E8E8E8;
-  display: flex;
+  display: none; /* hidden by default (mobile) */
   flex-direction: column;
   z-index: 200;
   transition: width 0.3s ease, transform 0.3s ease;
+}
+
+@media (min-width: 500px) {
+  .mobile-nav {
+    display: none;
+  }
+  
+  .desktop-nav {
+    display: flex;
+  }
+  
+  .sidebar {
+    display: flex; /* show sidebar only on >= 500px */
+  }
 }
 
 .sidebar.collapsed {
@@ -305,7 +308,6 @@ const toggleSidebar = () => {
   left: 0;
   right: 0;
   background: #FFF;
-  display: flex;
   justify-content: space-around;
   padding: 8px 0;
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
@@ -341,5 +343,18 @@ const toggleSidebar = () => {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+}
+
+/* Ensure bottom nav is only visible on small screens */
+@media (max-width: 499px) {
+  .bottom-nav {
+    display: flex;
+  }
+}
+
+@media (min-width: 500px) {
+  .bottom-nav {
+    display: none;
+  }
 }
 </style>

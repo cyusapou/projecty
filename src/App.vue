@@ -4,7 +4,7 @@
     <BottomNav />
     
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="main-content" :class="{ collapsed: !sidebarOpen }">
       <div class="content-wrapper">
         <RouterView />
       </div>
@@ -13,8 +13,12 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { RouterView } from 'vue-router'
 import BottomNav from './components/BottomNav.vue'
+import { store } from './store/index.js'
+
+const sidebarOpen = computed(() => store.sidebarOpen)
 </script>
 
 <style>

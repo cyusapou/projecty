@@ -79,7 +79,8 @@ const goToPlanner = () => {
 .page-wrapper {
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
-  background: #F5F5F5;
+  /* Let the landing gradient own the background instead of a flat gray */
+  background: transparent;
 }
 
 .mobile-lang-toggle {
@@ -106,6 +107,7 @@ const goToPlanner = () => {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  width: 100%;
   background: linear-gradient(180deg, #E8F5E9 0%, #FFF 60%);
   padding: 40px 20px;
 }
